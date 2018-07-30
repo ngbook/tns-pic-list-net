@@ -1,0 +1,12 @@
+<ActionBar title="缤纷水果季" class="action-bar"></ActionBar>
+
+<ScrollView orientation="vertical" height="100%">
+    <ListView [items]="picItems" class="list-group">
+        <ng-template let-item="item">
+            <GridLayout class="list-item" rows="250">
+                <Image [src]="item.pic" loadMode="async" class="item-pic" stretch="aspectFill"></Image>
+                <Label [text]="item.name" class="item-title"></Label>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+</ScrollView>
